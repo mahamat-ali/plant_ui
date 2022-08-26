@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app_zero/constants.dart';
+
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,8 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Plan App',
-        home: Container());
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: kBackgroundColor,
+        colorScheme: const ColorScheme.light(primary: kPrimaryColor),
+      ),
+      title: 'Plan App',
+      home: const HomeScreen(),
+    );
   }
 }
